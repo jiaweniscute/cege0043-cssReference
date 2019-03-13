@@ -212,27 +212,32 @@ _:-ms-input-placeholder, :root .demo-graph {
     z-index: 1;
 }
 
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    z-index: 2;
+    z-index: 1010;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 800px;
+    max-width: 100%;
+    height: 800px;
+    max-height: 100%;
+    margin-right: 10%;
+
 }
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 55%;
+    padding: 20px 20px 20px 20px;
+    overflow: auto;
+
 }
 
 /* The Close Button */
@@ -241,6 +246,7 @@ _:-ms-input-placeholder, :root .demo-graph {
     float: right;
     font-size: 28px;
     font-weight: bold;
+
 }
 
 .close:hover,
@@ -250,3 +256,14 @@ _:-ms-input-placeholder, :root .demo-graph {
     cursor: pointer;
 }
 
+.modal-overlay {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
